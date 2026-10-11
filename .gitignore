@@ -1,21 +1,29 @@
-# Build output
+
+# CMake build output
 /build/
-/out/
+/cmake-build-*/
 
-# IDE files
-.vscode/
-.idea/
-
-# Compiled binaries
+# Compiled binaries and debug symbols
 *.exe
 *.dll
-*.o
 *.obj
+*.o
 *.a
 *.lib
+*.pdb
 
 # CMake generated files
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
-build.ninja
+compile_commands.json
+.ninja_deps
+.ninja_log
+
+# IDE settings
+.vscode/
+.idea/
+
+# Operating system
+Thumbs.db
+.DS_Store

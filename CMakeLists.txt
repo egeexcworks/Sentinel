@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.25)
 
 project(Sentinel
-    VERSION 0.2.0
+    VERSION 0.3.0
     DESCRIPTION "Native Windows system monitoring and diagnostics"
     LANGUAGES CXX
 )
@@ -22,21 +22,17 @@ add_executable(Sentinel
     src/processes/ProcessMonitor.cpp
 )
 
-target_include_directories(Sentinel PRIVATE
-    src
-    src/monitoring
-    src/processes
+target_include_directories(Sentinel PRIVATE src)
+
+target_compile_definitions(Sentinel PRIVATE
+    NOMINMAX
+    WIN32_LEAN_AND_MEAN
 )
 
 target_compile_options(Sentinel PRIVATE
     -Wall
     -Wextra
     -Wpedantic
-)
-
-target_compile_definitions(Sentinel PRIVATE
-    NOMINMAX
-    WIN32_LEAN_AND_MEAN
 )
 
 target_link_libraries(Sentinel PRIVATE
