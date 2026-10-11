@@ -1,0 +1,21 @@
+# Build output
+/build/
+/out/
+
+# IDE files
+.vscode/
+.idea/
+
+# Compiled binaries
+*.exe
+*.dll
+*.o
+*.obj
+*.a
+*.lib
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+build.ninja
